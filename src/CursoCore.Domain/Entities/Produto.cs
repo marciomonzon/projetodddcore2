@@ -1,8 +1,6 @@
 ﻿using CursoCore.Domain.Shared.Entities;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace CursoCore.Domain.Entities
 {
@@ -15,6 +13,9 @@ namespace CursoCore.Domain.Entities
 
         //fk
         public int FornecedorId { get; set; }
+        public Fornecedor Fornecedor { get; set; }
+
+        public ICollection<ItensPedido> ItensPedidos { get; set; }
 
         public override bool EstaConsistente()
         {

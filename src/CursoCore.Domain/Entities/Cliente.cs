@@ -1,13 +1,12 @@
 ﻿using CursoCore.Domain.Shared.Entities;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace CursoCore.Domain.Entities
 {
     public class Cliente : Pessoa
     {
+        public ICollection<Pedido> Pedidos { get; set; }
 
         public override bool EstaConsistente()
         {

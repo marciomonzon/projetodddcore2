@@ -2,7 +2,6 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace CursoCore.Domain.Entities
 {
@@ -16,6 +15,9 @@ namespace CursoCore.Domain.Entities
 
         // FK
         public int ClienteId { get; set; }
+        public Cliente Cliente { get; set; }
+
+        public ICollection<ItensPedido> ItensPedidos { get; set; }
 
         public override bool EstaConsistente()
         {
