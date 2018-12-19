@@ -6,6 +6,11 @@ namespace CursoCore.Domain.Shared.ValueObjects
 {
     public class EnderecoVO
     {
+        public EnderecoVO()
+        {
+            UF = new UfVO();
+        }
+
         public string Lograoudo { get; set; }
         public string Bairro { get; set; }
         public string Cidade { get; set; }

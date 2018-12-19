@@ -7,6 +7,13 @@ namespace CursoCore.Domain.Shared.Entities
 {
     public class Pessoa : EntityBase
     {
+        public Pessoa()
+        {
+            CpfCnpj = new CpfCnpjVO();
+            Email = new EmailVO();
+            Endereco = new EnderecoVO();
+        }
+
         public string Apelido { get; set; }
         public string Nome { get; set; }
         public CpfCnpjVO CpfCnpj { get; set; }
