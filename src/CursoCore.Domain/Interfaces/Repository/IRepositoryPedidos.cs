@@ -16,6 +16,5 @@ namespace CursoCore.Domain.Interfaces.Repository
         ItensPedido ObterItensPedidosPorId(int id);
         IEnumerable<ItensPedido> ObterItensPedidos(int idPedido);
         Pedido ObterPorId(int id);
-
     }
 }
