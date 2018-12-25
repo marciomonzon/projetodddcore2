@@ -8,8 +8,4 @@
     <ProjectReference Include="..\CursoCore.CrossCutting\CursoCore.CrossCutting.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Interfaces\Services\" />
-  </ItemGroup>
-
 </Project>
