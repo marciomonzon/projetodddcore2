@@ -43,7 +43,8 @@ namespace CursoCore.Infrastructure.Data.Repository
             return _dbSet.AsNoTracking().Where(predicado);
         }
 
-        public IEnumerable<TEntidade> ObterTodos()
+        // posso dar override
+        public virtual IEnumerable<TEntidade> ObterTodos()
         {
             return _dbSet.ToList();
         }
