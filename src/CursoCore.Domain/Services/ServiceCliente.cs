@@ -3,6 +3,7 @@ using CursoCore.Domain.Interfaces.Repository;
 using CursoCore.Domain.Interfaces.Services;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 
@@ -18,15 +19,58 @@ namespace CursoCore.Domain.Services
             _repoCliente = repoCliente;
         }
 
-        public void Adicionar(Cliente obj)
+        #region Adicionar Cliente - Regras de Negócio
+
+        public void Adicionar(Cliente cliente)
         {
-            _repoCliente.Adicionar(obj);
+            cliente = AptoParaAdicionarCliente(cliente);
+
+            if (!cliente.ListaErros.Any()); // se a lista de erros estiver vazia
+                _repoCliente.Adicionar(cliente);
         }
 
+        private Cliente VerificarSeApelidoExisteNoBanco(Cliente cliente)
+        {
+            if (ObterPorId(cliente.Id) != null) 
+                cliente.ListaErros.Add("O apelido" + cliente.Apelido + "Já existe em outro cliente!");
+            return cliente;
+        }
+
+        private Cliente VerificarSeCpfCnpjExisteNoBanco(Cliente cliente)
+        {
+            if (ObterPorCpfCnpj(cliente.CpfCnpj.Numero) != null)
+                cliente.ListaErros.Add("O CPF/CNPJ informado já existe!");
+            return cliente;
+        }
+
+        private Cliente AptoParaAdicionarCliente(Cliente cliente)
+        {
+            if (!cliente.EstaConsistente())
+                return cliente;
+
+            cliente = VerificarSeApelidoExisteNoBanco(cliente);
+            cliente = VerificarSeCpfCnpjExisteNoBanco(cliente);
+
+            return cliente;
+        }
+
+        #endregion
+
+        #region Alterar Cliente - Regras de Negócio
         public void Atualizar(Cliente obj)
         {
             _repoCliente.Atualizar(obj);
         }
+
+        private Cliente VerificarSeCpfCnpjExisteNoBancoEmAlteracao(Cliente cliente)
+        {
+            if (ObterPorCpfCnpj(cliente.CpfCnpj.Numero) != null)
+                cliente.ListaErros.Add("O CPF/CNPJ informado já existe!");
+            return cliente;
+        }
+
+
+        #endregion
 
         public void Remover(Cliente obj)
         {
