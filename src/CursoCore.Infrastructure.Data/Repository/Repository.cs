@@ -1,8 +1,10 @@
 ﻿using CursoCore.Domain.Interfaces.Repository;
 using CursoCore.Infrastructure.Data.Context;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
@@ -48,6 +50,17 @@ namespace CursoCore.Infrastructure.Data.Repository
         {
             return _dbSet.ToList();
         }
+
+        #region para trabalhar com ADO
+        protected string ObterStringConexao()
+        {
+            var config = new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json")
+                .Build();
+            return config.GetConnectionString("DefaultConnection");
+        }
+        #endregion
 
         public void Dispose()
         {

@@ -64,7 +64,8 @@ namespace CursoCore.Domain.Services
 
         private Cliente VerificarSeCpfCnpjExisteNoBancoEmAlteracao(Cliente cliente)
         {
-            if (ObterPorCpfCnpj(cliente.CpfCnpj.Numero) != null)
+            var result = ObterPorCpfCnpj(cliente.CpfCnpj.Numero);
+            if (result != null && result.Id != cliente.Id)
                 cliente.ListaErros.Add("O CPF/CNPJ informado já existe!");
             return cliente;
         }
