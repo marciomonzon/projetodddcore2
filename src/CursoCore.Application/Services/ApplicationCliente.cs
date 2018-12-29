@@ -61,7 +61,8 @@ namespace CursoCore.Application.Services
 
         public IEnumerable<ClienteViewModel> ObterTodos()
         {
-            throw new NotImplementedException();
+            var cliente = _serviceCliente.ObterTodos();
+            return _mapper.Map<IEnumerable<ClienteViewModel>>(cliente);
         }
 
         public void Dispose()

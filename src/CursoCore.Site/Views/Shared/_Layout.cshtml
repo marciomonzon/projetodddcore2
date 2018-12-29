@@ -27,18 +27,19 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Home</a>
+
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li class="dropdown">
                         <a href="#" data-toggle="dropdown" class="dropdown-toggle"> Cadastros <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Clientes</a></li>
+                            <li><a asp-area="Cadastros" asp-controller="Clientes" asp-action="Index">Clientes</a></li>
                             <li><a href="#">Fornecedores</a></li>
                             <li><a href="#">Produtos</a></li>
                         </ul>
                     </li>
-                    <li><a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">Pedidos</a></li>
+                    <li><a asp-area="" asp-controller="Home" asp-action="Index">Pedidos</a></li>
                 </ul>
             </div>
         </div>
