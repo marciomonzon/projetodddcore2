@@ -15,7 +15,7 @@ namespace CursoCore.Application.ViewModels
         public List<string> ListaErros { get; set; }
         public string Apelido { get; set; }
         public string Nome { get; set; }
-        public decimal Valor { get; set; }
+        public string Valor { get; set; }
         public string Unidade { get; set; }
 
         public int FornecedorId { get; set; }
