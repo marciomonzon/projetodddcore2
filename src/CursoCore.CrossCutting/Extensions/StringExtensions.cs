@@ -40,11 +40,11 @@ namespace CursoCore.CrossCutting.Extensions
             {
                 if(strIn.Length == 11) // cpf
                 {
-                    return strIn.Substring(0, 3) + "." + strIn.Substring(4, 3) + "." + strIn.Substring(7, 3) + "-" + strIn.Substring(10, 2);
+                    return strIn.Substring(0, 3) + "." + strIn.Substring(3, 3) + "." + strIn.Substring(6, 3) + "-" + strIn.Substring(9, 2);
                 }
                 if (strIn.Length == 14) // cnpj
                 {
-                    return strIn.Substring(0, 2) + "." + strIn.Substring(3, 3) + "." + strIn.Substring(6, 3) + "/" + strIn.Substring(8, 4) + "-" + strIn.Substring(13,2);
+                    return strIn.Substring(0, 2) + "." + strIn.Substring(2, 3) + "." + strIn.Substring(5, 3) + "/" + strIn.Substring(7, 4) + "-" + strIn.Substring(12,2);
                 }
             }
             return string.Empty;
