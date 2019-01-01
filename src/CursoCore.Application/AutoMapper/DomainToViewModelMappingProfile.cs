@@ -2,9 +2,6 @@
 using CursoCore.Application.ViewModels;
 using CursoCore.CrossCutting.Extensions;
 using CursoCore.Domain.Entities;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CursoCore.Application.AutoMapper
 {

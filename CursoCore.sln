@@ -25,7 +25,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CursoCore.Infrastructure.Da
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CursoCore.Site", "src\CursoCore.Site\CursoCore.Site.csproj", "{9CD54532-6A15-4281-8329-D45FF0E3EA09}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursoCore.Application", "src\CursoCore.Application\CursoCore.Application.csproj", "{B2C9D6BC-A100-47CF-8E69-0B9C41B2CB15}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CursoCore.Application", "src\CursoCore.Application\CursoCore.Application.csproj", "{B2C9D6BC-A100-47CF-8E69-0B9C41B2CB15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CursoCore.Ioc", "src\CursoCore.Ioc\CursoCore.Ioc.csproj", "{89ED4330-2A89-4A1E-8A77-B5FB2251A05B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +55,10 @@ Global
 		{B2C9D6BC-A100-47CF-8E69-0B9C41B2CB15}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2C9D6BC-A100-47CF-8E69-0B9C41B2CB15}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2C9D6BC-A100-47CF-8E69-0B9C41B2CB15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89ED4330-2A89-4A1E-8A77-B5FB2251A05B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89ED4330-2A89-4A1E-8A77-B5FB2251A05B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89ED4330-2A89-4A1E-8A77-B5FB2251A05B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89ED4330-2A89-4A1E-8A77-B5FB2251A05B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -65,6 +71,7 @@ Global
 		{E771AEE7-ECB3-4414-B0B9-EA35992CAB3B} = {BED20C1C-32C2-47AD-B47A-735EDAD81B46}
 		{9CD54532-6A15-4281-8329-D45FF0E3EA09} = {9C6E4FB9-D3E7-4D7B-934C-A6A605CD24CB}
 		{B2C9D6BC-A100-47CF-8E69-0B9C41B2CB15} = {0F9F29C4-DC23-411E-BD6C-ADFA1D24341C}
+		{89ED4330-2A89-4A1E-8A77-B5FB2251A05B} = {33890F46-9249-498D-94A2-CE20659E40E0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E405E8F9-7E5A-4B48-B607-E8D43C8CE3AF}

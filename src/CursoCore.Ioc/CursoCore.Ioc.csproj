@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CursoCore.Application\CursoCore.Application.csproj" />
+    <ProjectReference Include="..\CursoCore.Domain\CursoCore.Domain.csproj" />
+    <ProjectReference Include="..\CursoCore.Infrastructure.Data\CursoCore.Infrastructure.Data.csproj" />
+  </ItemGroup>
+
+</Project>
